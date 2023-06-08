@@ -1,1 +1,31 @@
+server:
+  port: 9001
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: LIM
+  servlet:
+    multipart:
+      max-file-size: 6MB
+      max-request-size: 30MB
+
+jpa:
+  database: POSTGRESQL
+  show-sql: true
+  hibernate:
+    ddl-auto: create-drop
+datasource:
+  username: root
+  password: password
+  url: jdbc:postgresql://localhost:5432/Limdb
+  hikari:
+    connection-timeout: 2000
+    maximum-pool-size: 5
+
+sql:
+  init:
+    mode: always
+    platform: postgres
 
